@@ -53,7 +53,6 @@ def processlog(request):
 def product(request, number):
     context = {}
     context['stuff'] = Item.objects.filter(id = number)
-    print context['stuff']
     return render(request, 'store/product.html', context)
 
 def items(request):

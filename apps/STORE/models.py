@@ -10,9 +10,7 @@ NAME_REGEX = re.compile(r'^[A-Za-z]\w+$')
 
 class UserManager(models.Manager):
     def validate_reg(self, postData):
-        print '~~~~~~~~~~~'
         errors = []
-        print postData
         my_re = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
         
         #validation block
